@@ -1,5 +1,7 @@
 #include "monty.h"
 
+int globalstatus = EXIT_SUCCESS;
+
 /**
  * main - Entry point for the Monty interpreter
  * @argc: argument count
@@ -7,6 +9,7 @@
  *
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure
  */
+
 int main(int argc, char **argv)
 {
 	FILE *fp;
@@ -32,12 +35,12 @@ int main(int argc, char **argv)
 	{
 		line_number++;
 		opcode = strtok(line, " \t\n");
-		/* If the line is empty or a comment, continue to the next line */
 		if (opcode == NULL || *opcode == '#')
 			continue;
-		if (get_opcode_func(opcode) == NULL)
+		if (get_opcode_func(opcode) == NULL || globalstatus == EXIT_FAILURE)
 		{
-			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+			if (globalstatus != EXIT_FAILURE)
+				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 			free_stack(stack);
 			free(line);
 			fclose(fp);
