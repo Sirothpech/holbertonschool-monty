@@ -5,6 +5,8 @@
 #include <string.h>
 #include <ctype.h>
 
+extern int globalstatus;
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,5 +41,6 @@ void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);
 void free_stack(stack_t *stack);
+int isdigit_string(const char *str);
 
 #endif
