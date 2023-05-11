@@ -49,7 +49,7 @@ void _div(stack_t **stack, unsigned int line_number);
 void _mul(stack_t **stack, unsigned int line_number);
 void _mod(stack_t **stack, unsigned int line_number);
 void _pchar(stack_t **stack, unsigned int line_number);
-
+void _pchar(stack_t **stack, unsigned int line_number);
 void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);
 void free_stack(stack_t *stack);
 int isdigit_string(const char *str);
