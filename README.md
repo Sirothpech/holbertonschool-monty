@@ -23,11 +23,11 @@ We have done this project in teams of three people in four days.
 * All your header files should be include guarded
 * You are expected to do the tasks in the order shown in the project
 
-### Tasks and Prototype
-#### Tasks 0 to 12
+## Tasks and Prototype
+### Tasks 0 to 12
 Implement the ```push``` and ```pall``` opcodes.
 
-##The push opcode
+####The push opcode
 
 The opcode ```push``` pushes an element to the stack.
 
@@ -37,7 +37,7 @@ The opcode ```push``` pushes an element to the stack.
   - where is the line number in the file
 * You won’t have to deal with overflows. Use the atoi function
 
-##The pall opcode
+####The pall opcode
 
 The opcode ```pall``` prints all the values on the stack, starting from the top of the stack.
 
@@ -56,7 +56,7 @@ root@103eae5f6fe8:~/holbertonschool-monty# ./monty 00.m
 1
 root@103eae5f6fe8:~/holbertonschool-monty#:~/monty$ ```
 
-## All Prototypes:
+#### All Prototypes:
 ```stack_t *add_dnodeint_end(stack_t **head, const int n);```
 ```void _push(stack_t **stack, unsigned int line_number);```
 ```void _pall(stack_t **stack, unsigned int line_number);```
