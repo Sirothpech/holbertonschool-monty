@@ -11,7 +11,7 @@ void _swap(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		/*Not enough elements in the list to perform the swap */
-		fprintf(stderr, "L%d: can't swap, stack too short", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		globalstatus = EXIT_FAILURE;
 		return;
 	}
