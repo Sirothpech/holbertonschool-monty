@@ -59,26 +59,26 @@ root@103eae5f6fe8:~/holbertonschool-monty#:~/monty$
 ```
 
 #### All Prototypes:
-```stack_t *add_dnodeint_end(stack_t **head, const int n);```
-```void _push(stack_t **stack, unsigned int line_number);```
-```void _pall(stack_t **stack, unsigned int line_number);```
-```void _pint(stack_t **stack, unsigned int line_number);```
-```void _pop(stack_t **stack, unsigned int line_number);```
-```void _swap(stack_t **stack, unsigned int line_number);```
-```void _add(stack_t **stack, unsigned int line_number);```
-```void _nop(stack_t **stack, unsigned int line_number);```
-```void _sub(stack_t **stack, unsigned int line_number);```
-```void _div(stack_t **stack, unsigned int line_number);```
-```void _mul(stack_t **stack, unsigned int line_number);```
-```void _mod(stack_t **stack, unsigned int line_number);```
-```void _pchar(stack_t **stack, unsigned int line_number);```
-```void _pstr(stack_t **stack, unsigned int line_number);```
-```void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);```
-```void free_stack(stack_t *stack);```
-```int isdigit_string(const char *str);```
 
-```void error_usage(int argc);```
-```void error_open_file(FILE *fp, char **argv);```
+* ```void _push(stack_t **stack, unsigned int line_number);```
+* ```void _pall(stack_t **stack, unsigned int line_number);```
+* ```void _pint(stack_t **stack, unsigned int line_number);```
+* ```void _pop(stack_t **stack, unsigned int line_number);```
+* ```void _swap(stack_t **stack, unsigned int line_number);```
+* ```void _add(stack_t **stack, unsigned int line_number);```
+* ```void _nop(stack_t **stack, unsigned int line_number);```
+* ```void _sub(stack_t **stack, unsigned int line_number);```
+* ```void _div(stack_t **stack, unsigned int line_number);```
+* ```void _mul(stack_t **stack, unsigned int line_number);```
+* ```void _mod(stack_t **stack, unsigned int line_number);```
+* ```void _pchar(stack_t **stack, unsigned int line_number);```
+* ```void _pstr(stack_t **stack, unsigned int line_number);```
+* ```void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);```
+* ```void free_stack(stack_t *stack);```
+* ```int isdigit_string(const char *str);```
+
+* ```void error_usage(int argc);```
+* ```void error_open_file(FILE *fp, char **argv);```
 
 ## Authors
 This project was realized by Quentin Rouger (@quentinrouger) - Marc Pourias (@MarcP70) - Christophe Ngan (@Sirothpech)
