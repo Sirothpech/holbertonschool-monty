@@ -20,5 +20,6 @@ void (*get_opcode_func(char *opcode))(stack_t **, unsigned int)
 		if (strcmp(opcode, instructions[i].opcode) == 0)
 			return (instructions[i].f);
 	}
+	globalstatus = EXIT_FAILURE;
 	return (NULL);
 }
