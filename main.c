@@ -31,18 +31,14 @@ int main(int argc, char **argv)
 		{
 			if (globalstatus == EXIT_FAILURE)
 				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-			free_stack(stack);
-			free(line);
-			fclose(fp);
-			exit(EXIT_FAILURE);
+			break;
 		}
 		get_opcode_func(opcode)(&stack, line_number);
 	}
 	free_stack(stack);
 	free(line);
 	fclose(fp);
-	if (globalstatus != EXIT_FAILURE)
-		exit(EXIT_SUCCESS);
-	else
+	if (globalstatus == EXIT_FAILURE)
 		exit(EXIT_FAILURE);
+	exit(EXIT_SUCCESS);
 }
