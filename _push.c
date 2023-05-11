@@ -16,21 +16,21 @@ void _push(stack_t **stack, unsigned int line_number)
 	value_str = strtok(NULL, " \n\t");
 
 	/* Check if the value argument is missing */
-	if (value_str == NULL)
+	if (value_str == NULL || isdigit_string(value_str) == 0)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
+		globalstatus = EXIT_FAILURE;
+		return;
 	}
-
 	/* Convert the value argument to an integer */
 	value = atoi(value_str);
-
 	/* Create a new node and add it to the stack */
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		globalstatus = EXIT_FAILURE;
+		return;
 	}
 	new_node->n = value;
 	new_node->prev = NULL;
