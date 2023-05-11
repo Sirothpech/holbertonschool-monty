@@ -42,6 +42,8 @@ void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);
 void free_stack(stack_t *stack);
 int isdigit_string(const char *str);
