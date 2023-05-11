@@ -1,4 +1,13 @@
 # C - Stack, Queues - LIFO, FIFO
+
+## Introduction
+This repository is about our third major project after three months learning C programming language at Holberton School.
+The project was to create interpreter for Monty ByteCode files.
+We have done this project in teams of three people in four days.
+
+## Instructions
+***Create an interpreter for Monty ByteCode files, manipulating the stack and queues.***
+
 ## Requirements
 ### General
 * Allowed editors:```vi```, ```vim```, ```emacs```
@@ -14,8 +23,8 @@
 * All your header files should be include guarded
 * You are expected to do the tasks in the order shown in the project
 
-### Tasks
-#### 0. Prototype: ```stack_t *add_dnodeint_end(stack_t **head, const int n);```
+### Tasks and Prototype
+#### Tasks 0 to 12
 Implement the ```push``` and ```pall``` opcodes.
 
 ####The push opcode
@@ -34,18 +43,38 @@ The opcode ```pall``` prints all the values on the stack, starting from the top 
 * Usage ```pall```
 * Format: see example
 * If the stack is empty, don’t print anything
+```julien@ubuntu:~/monty$ cat -e bytecodes/00.m
+push 1$
+push 2$
+push 3$
+pall$
+julien@ubuntu:~/monty$ ./monty bytecodes/00.m
+3
+2
+1
+julien@ubuntu:~/monty$```
 
-#### 1. Prototype: ```unsigned long int hash_djb2(const unsigned char *str);```
+### All Prototypes:
+```stack_t *add_dnodeint_end(stack_t **head, const int n);```
+```void _push(stack_t **stack, unsigned int line_number);```
+```void _pall(stack_t **stack, unsigned int line_number);```
+```void _pint(stack_t **stack, unsigned int line_number);```
+```void _pop(stack_t **stack, unsigned int line_number);```
+```void _swap(stack_t **stack, unsigned int line_number);```
+```void _add(stack_t **stack, unsigned int line_number);```
+```void _nop(stack_t **stack, unsigned int line_number);```
+```void _sub(stack_t **stack, unsigned int line_number);```
+```void _div(stack_t **stack, unsigned int line_number);```
+```void _mul(stack_t **stack, unsigned int line_number);```
+```void _mod(stack_t **stack, unsigned int line_number);```
+```void _pchar(stack_t **stack, unsigned int line_number);```
+```void _pstr(stack_t **stack, unsigned int line_number);```
+```void (*get_opcode_func(char *opcode))(stack_t **, unsigned int);```
+```void free_stack(stack_t *stack);```
+```int isdigit_string(const char *str);```
 
-#### 2. Prototype: ```unsigned long int key_index(const unsigned char *key, unsigned long int size);```
-
-#### 3. Prototype: ```int hash_table_set(hash_table_t *ht, const char *key, const char *value);```
-
-#### 4. Prototype: ```char *hash_table_get(const hash_table_t *ht, const char *key);```
-
-#### 5. Prototype: ```void hash_table_print(const hash_table_t *ht);```
-
-#### 6. Prototype: ```void hash_table_delete(hash_table_t *ht);```
+```void error_usage(int argc);```
+```void error_open_file(FILE *fp, char **argv);```
 
 ## Authors
 This project was realized by Quentin Rouger (@quentinrouger) - Marc Pourias (@MarcP70) - Christophe Ngan (@Sirothpech)
